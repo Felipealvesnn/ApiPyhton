@@ -61,6 +61,3 @@ def generate_webcam_frames():
 async def webcam_feed():
     return Response(generate_webcam_frames(), media_type='multipart/x-mixed-replace; boundary=frame')
 
-@router.get('/camRua_feed')
-def camRua_feed():
-  return Response(generate_camRua_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
